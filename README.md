@@ -101,6 +101,7 @@ const articleSchema = generateArticleSchema({
 
 **Khaled Gamal Khalaf**
 - Senior Technical SEO & Digital Growth Architect (12+ Years in Production Platforms)
+- ORCID iD: [0009-0006-1672-5489](https://orcid.org/0009-0006-1672-5489)
 - LinkedIn: [linkedin.com/in/khaledkhalaf92](https://www.linkedin.com/in/khaledkhalaf92/)
 - GitHub: [@khaledkhalaf1992](https://github.com/khaledkhalaf1992)
 
@@ -108,3 +109,4 @@ const articleSchema = generateArticleSchema({
 
 ## 📄 License
 This project is licensed under the [MIT License](LICENSE). Free for personal and commercial usage.
+
