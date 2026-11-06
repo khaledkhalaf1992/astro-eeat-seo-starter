@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { generateOrganizationSchema } from '../utils/schemaGenerator';
+
+const orgSchema = generateOrganizationSchema({
+  name: 'Astro E-E-A-T Showcase',
+  url: 'https://astro-eeat-starter.pages.dev',
+  logo: 'https://astro-eeat-starter.pages.dev/logo.png',
+  description: 'Reference architecture for sub-second Core Web Vitals and programmatic Google E-E-A-T SEO.',
+  sameAs: ['https://github.com/khaledkhalaf1992'],
+});
+---
+
+<BaseLayout
+  title="Sub-Second Core Web Vitals & E-E-A-T Architecture"
+  description="Production-grade Astro starter template with Google E-E-A-T architecture, automated Schema.org JSON-LD, and sub-second Core Web Vitals."
+  schemaJSON={orgSchema}
+>
+  <div style="text-align: center; margin-bottom: 3.5rem;">
+    <span style="background: rgba(56, 189, 248, 0.1); color: #38bdf8; padding: 0.35rem 1rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600; border: 1px solid rgba(56, 189, 248, 0.2);">Production Ready</span>
+    <h1 style="font-size: 2.75rem; font-weight: 800; line-height: 1.2; margin: 1.5rem 0 1rem; color: #ffffff;">
+      Astro E-E-A-T SEO Starter
+    </h1>
+    <p style="font-size: 1.2rem; color: #94a3b8; max-width: 650px; margin: 0 auto;">
+      A battle-tested foundation for content publishers, local portals, and directory systems designed to survive Google Core Updates.
+    </p>
+  </div>
+
+  <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 4rem;">
+    <div style="background: #111827; padding: 1.75rem; border-radius: 0.75rem; border: 1px solid #1f2937;">
+      <h3 style="color: #38bdf8; margin-top: 0;">⚡ 100/100 Core Web Vitals</h3>
+      <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 0;">Zero runtime JavaScript overhead. Zero cumulative layout shift (CLS). Instant sub-100ms LCP.</p>
+    </div>
+    <div style="background: #111827; padding: 1.75rem; border-radius: 0.75rem; border: 1px solid #1f2937;">
+      <h3 style="color: #38bdf8; margin-top: 0;">🛡️ Automated Schema.org</h3>
+      <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 0;">Built-in JSON-LD generators for TechArticle, Organization, BreadcrumbList, and Author credentials.</p>
+    </div>
+    <div style="background: #111827; padding: 1.75rem; border-radius: 0.75rem; border: 1px solid #1f2937;">
+      <h3 style="color: #38bdf8; margin-top: 0;">🌐 Edge Optimized</h3>
+      <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 0;">Deployable in seconds to Cloudflare Pages, Vercel, or Netlify with automatic XML sitemap pinging.</p>
+    </div>
+  </section>
+
+  <section style="background: #111827; padding: 2rem; border-radius: 0.75rem; border: 1px solid #1f2937;">
+    <h2 style="margin-top: 0; color: #ffffff;">Quick Start</h2>
+    <pre style="background: #030712; padding: 1rem 1.25rem; border-radius: 0.5rem; overflow-x: auto; color: #38bdf8; font-family: monospace;"><code>git clone https://github.com/khaledkhalaf1992/astro-eeat-seo-starter.git
+cd astro-eeat-seo-starter
+npm install
+npm run dev</code></pre>
+  </section>
+</BaseLayout>

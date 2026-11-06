@@ -1,0 +1,52 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonicalURL?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  publishDate?: string;
+  authorName?: string;
+  schemaJSON?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonicalURL = Astro.url.href,
+  image = '/og-image.jpg',
+  type = 'website',
+  schemaJSON,
+} = Astro.props;
+
+const siteTitle = `${title} | E-E-A-T Architecture`;
+---
+
+<!-- Core Meta Tags -->
+<title>{siteTitle}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={siteTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={siteTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site)} />
+
+<!-- Resource Hints & DNS Prefetching -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+<!-- Schema.org Structured Data -->
+{schemaJSON && (
+  <script type="application/ld+json" set:html={JSON.stringify(schemaJSON)} />
+)}

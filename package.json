@@ -1,0 +1,35 @@
+{
+  "name": "astro-eeat-seo-starter",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Production-grade Astro starter template with Google E-E-A-T architecture, automated Schema.org JSON-LD, and sub-second Core Web Vitals.",
+  "author": "Khaled Gamal Khalaf <khaledkhalaf1992@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khaledkhalaf1992/astro-eeat-seo-starter"
+  },
+  "keywords": [
+    "astro",
+    "technical-seo",
+    "eeat",
+    "schema-org",
+    "json-ld",
+    "core-web-vitals",
+    "cloudflare-pages",
+    "performance"
+  ],
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.18",
+    "typescript": "^5.7.3"
+  }
+}
